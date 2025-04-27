@@ -66,7 +66,11 @@ Qualitative evaluation on a few test images showed that **the model correctly cl
 
 ## 9. Interpretation
 
-The test accuracy indicates the model's ability to generalize to unseen images. The training and validation curves suggest the model learned effectively without significant overfitting. Any discrepancies between training and validation performance indicate areas for improvement. The predictions on individual images provide a visual confirmation of the model's classification ability.
+The test accuracy of approximately 0.8387 indicates a reasonable ability of the model to generalize to unseen images. However, the training and validation curves reveal important insights into the learning process. The steadily increasing training accuracy (reaching around 0.9859) coupled with the consistently decreasing training loss (reaching 0.0423) suggests that the model learned the training data very well.
+
+Conversely, the validation accuracy, after an initial rise, plateaued around 0.84-0.85 and showed fluctuations, ending at approximately 0.8407. More significantly, the validation loss, after an initial decrease to a minimum around the 2nd epoch (around 0.47-0.48), generally increased to 0.8195 by the final epoch. This divergence between the training and validation performance, particularly the plateauing of validation accuracy and the increase in validation loss, strongly suggests that the model started **overfitting** the training data in the later epochs. While the model performs reasonably well on unseen data overall, its ability to generalize further was limited by this overfitting.
+
+The qualitative evaluation, showing correct classification in a majority of visualized images, provides a more intuitive sense of the model's performance on individual examples and aligns with the overall test accuracy. However, the signs of overfitting in the training metrics indicate a need for potential improvements to prevent the model from memorizing the training data and enhance its generalization capabilities.
 
 ## 10. Recommendations
 
